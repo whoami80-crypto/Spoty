@@ -1,0 +1,243 @@
+.auth-container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--spotify-green) 0%, var(--spotify-black) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
+
+.auth-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80') center/cover;
+  opacity: 0.1;
+}
+
+.auth-header {
+  width: 100%;
+  max-width: 734px;
+  padding: 20px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo i {
+  margin-right: 10px;
+  font-size: 32px;
+  color: var(--spotify-white);
+}
+
+.auth-card {
+  background-color: var(--spotify-black);
+  border-radius: 8px;
+  padding: 32px;
+  width: 100%;
+  max-width: 734px;
+  box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
+}
+
+.auth-card h2 {
+  font-size: 32px;
+  margin-bottom: 28px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #727272;
+  border-radius: 4px;
+  background-color: var(--spotify-dark-gray);
+  color: var(--spotify-white);
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  border-color: var(--spotify-white);
+  outline: none;
+}
+
+.form-group input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.auth-button {
+  width: 100%;
+  padding: 14px;
+  background-color: var(--spotify-green);
+  color: var(--spotify-black);
+  border: none;
+  border-radius: 500px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.auth-button:hover:not(:disabled) {
+  background-color: #1ed760;
+  transform: scale(1.02);
+}
+
+.auth-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  margin: 32px 0;
+  color: var(--spotify-light-gray);
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #727272;
+}
+
+.auth-divider span {
+  padding: 0 16px;
+  font-size: 14px;
+}
+
+.social-login {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid #727272;
+  border-radius: 500px;
+  background: transparent;
+  color: var(--spotify-white);
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+
+.social-button i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.social-button:hover:not(:disabled) {
+  border-color: var(--spotify-white);
+  transform: scale(1.02);
+}
+
+.social-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.social-button.facebook:hover:not(:disabled) {
+  border-color: #1877f2;
+  color: #1877f2;
+}
+
+.social-button.apple:hover:not(:disabled) {
+  border-color: #a2aaad;
+  color: #a2aaad;
+}
+
+.social-button.google:hover:not(:disabled) {
+  border-color: #4285f4;
+  color: #4285f4;
+}
+
+.auth-footer {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.auth-footer a {
+  color: var(--spotify-white);
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.auth-footer a:hover {
+  color: var(--spotify-green);
+}
+
+.error-message {
+  background-color: #e22134;
+  color: white;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.auth-signature {
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  z-index: 1;
+}
+
+/* Responsive auth */
+@media (max-width: 768px) {
+  .auth-container {
+    padding: 10px;
+  }
+  
+  .auth-card {
+    padding: 20px;
+  }
+  
+  .auth-card h2 {
+    font-size: 24px;
+  }
+  
+  .logo {
+    font-size: 20px;
+  }
+  
+  .logo i {
+    font-size: 28px;
+  }
+}
